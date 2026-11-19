@@ -19,7 +19,7 @@ class MaquillageApplicationTests {
 
     @Test
     public void testCreatemaquillage() {
-        maquillage maq = new maquillage("Maybelline mascara", 80.0, new Date());
+        maquillage maq = new maquillage("kiko mascara", 64.0, new Date());
         maquillageRepository.save(maq);
     }
 

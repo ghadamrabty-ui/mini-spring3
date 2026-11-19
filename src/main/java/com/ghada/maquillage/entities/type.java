@@ -20,7 +20,6 @@ public class type {
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
 	 private Long idtyp;
 	 private String nomtyp;
-	 private String descriptiontyp;
 	
 	@OneToMany(mappedBy = "type")
 	@JsonIgnore
@@ -50,12 +49,8 @@ public class type {
 	public void setNomtyp(String nomtyp) {
 	this.nomtyp = nomtyp;
 	}
-	public String getDescriptiontyp() {
-	return descriptiontyp;
-	}
-	public void setDescriptiontyp(String descriptiontyp) {
-	this.descriptiontyp = descriptiontyp;
-	}
+	
+
 	public List<maquillage> getMaquillages() {
 	    return maquillages;
 	}

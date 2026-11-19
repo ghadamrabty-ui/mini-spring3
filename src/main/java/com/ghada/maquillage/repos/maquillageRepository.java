@@ -19,18 +19,18 @@ public interface maquillageRepository extends JpaRepository<maquillage, Long> {
     List<maquillage> findByNommaquillageContaining(String nommaquillage);
 
     
-   /* @Query("select p from maquillage p where p.nommaquillage like %?1 and p.prixmaquillaget > ?2")
-    List<maquillage> findByNomPrix (String nommaquillage, Double prix);*/
+    @Query("select p from maquillage p where p.nommaquillage like %?1% and p.prixmaquillage > ?2")
+    List<maquillage> findByNomPrix(String nommaquillage, Double prix);
     
-    @Query("select p from maquillage p where p.nommaquillage like %:nom and p.prixmaquillage > :prixmaquillage")
-    List<maquillage> findByNomPrix (@Param("nom") String nommaquillage,@Param("prixmaquillage") Double prixmaquillage);
+    // @Query("select p from maquillage p where p.nommaquillage like %:nom and p.prixmaquillage > :prixmaquillage")
+    //List<maquillage> findByNomPrix (@Param("nom") String nommaquillage,@Param("prixmaquillage") Double prixmaquillage);
     
     
     @Query("select p from maquillage p where p.type = ?1")
     List<maquillage> findBytype (type type);
     
-    
-    List<maquillage> findBytypeIdtyp(Long id);
+   
+    List<maquillage> findBytypeIdtyp(Long idtype);
     
     List<maquillage> findByOrderByNommaquillageAsc();
     

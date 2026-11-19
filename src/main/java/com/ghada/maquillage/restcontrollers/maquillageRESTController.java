@@ -64,7 +64,11 @@ public class maquillageRESTController {
    public List<maquillage> getProduitsByCatId(@PathVariable("idtyp") Long idtyp) {
    return maquillageService.findBytypeIdtyp(idtyp);
    }
-    
+
+   /*@GetMapping("/musByName/{nom}")
+   public List<maquillage> findByNommaquillageContaining(@PathVariable("nom") String nom) {
+       return maquillageService.findByNommaquillage(nom);
+   }*/
     
     
     
